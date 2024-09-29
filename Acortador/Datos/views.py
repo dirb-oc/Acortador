@@ -1,17 +1,21 @@
 import qrcode
 import base64
+import pyshorteners
 from io import BytesIO
-from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
     qr_image_url = None
+    Link = None
+    resultado = None 
 
     if request.method == "POST":
-        link = request.POST.get('Link')
+        Link = request.POST.get('Link')
+        art = pyshorteners.Shortener()
+        resultado = (art.tinyurl.short(Link))
         
         # Generar el código QR
-        img = qrcode.make(link)
+        img = qrcode.make(resultado)
         buffer = BytesIO()
         img.save(buffer, format="PNG")
         buffer.seek(0)
@@ -22,4 +26,5 @@ def index(request):
 
     return render(request, 'index.html', {
         'qr_image_url': qr_image_url,
+        'resultado': resultado
     })
