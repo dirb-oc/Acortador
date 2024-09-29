@@ -12,8 +12,9 @@
         <input type="text" name="Link" placeholder="Coloca el Link">
         <input type="submit" value="Enviar">
     </form>
-    {% if resultado %}
-        <a hreaf={{ resultado }}>{{ resultado }}</a>
-    {% endif %}  
+    {% if qr_image_url %}
+        <h2>Tu código QR:</h2>
+        <img src="{{ qr_image_url }}" alt="Código QR">
+    {% endif %}
 </body>
 </html>
