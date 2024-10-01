@@ -5,32 +5,33 @@
 }
 
 body {
-    background-color: #f4e3d7; /* Color cálido */
+    background-color: #E3F2FD; /* Azul claro */
 }
 
 .Centrar {
-    margin: auto;
-    margin-top: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFF3E0; /* Fondo cálido */
+    margin: auto;
+    margin-top: 300px;
+    background-color: #BBDEFB; /* Fondo azul suave */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 800px;
+    width: 750px;
 }
 
 label {
     margin-bottom: 10px;
-    font-size: 22px;
-    color: #333;
+    font-size: 25px;
+    font-weight: 700;
+    color: #0D47A1; /* Azul oscuro */
 }
 
 input[type="text"] {
     padding: 10px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #90CAF9; /* Borde azul claro */
     border-radius: 20px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -38,7 +39,7 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background-color: #FF6F61; /* Color cálido */
+    background-color: #1976D2; /* Botón azul medio */
     color: white;
     border: none;
     border-radius: 5px;
@@ -46,5 +47,5 @@ button {
 }
 
 button:hover {
-    background-color: #FF8C42; /* Efecto hover cálido */
+    background-color: #1E88E5; /* Efecto hover azul más claro */
 }
