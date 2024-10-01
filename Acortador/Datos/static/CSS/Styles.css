@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+        background-color: #FFF3E0;
+}
+
+.Centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    height: 60vh;
+}
+
+input{
+    width: 700px;
+    height: 70px;
+    border-radius: 40px;
+}
