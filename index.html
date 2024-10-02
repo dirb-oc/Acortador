@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles.css">
-    <title>Acortador</title>
+    <title>Acortador de Enlaces</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu CSS -->
 </head>
 <body>
-    <form method="post" class="Centrar">
-        <label for="nombre">Link:</label>
-        <input type="text" name="Link" placeholder="Coloca el Link">
-        <button type="submit" value="Enviar">Enviar</button>
-    </form>
-    <!--
-        <h2>Tu código QR:</h2>
-        <p>Link</p>
-    -->
+    <div class="container">
+        <form method="post" class="Centrar">
+            <input type="text" name="Link" placeholder="Link" required>
+            <button type="submit" value="Enviar">Acortar</button>
+        </form>
+        <div class="centrar">
+            <div class="Resultado">
+                <h2>Link Acortado</h2>
+                <a href="https://www.youtube.com/watch?v=GInvl1VqHE0" target="_blank">https://www.youtube.com/watch?v=GInvl1VqHE0</a>
+                <img src="QR.png" alt="Código QR">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

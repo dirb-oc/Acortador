@@ -1,51 +1,80 @@
 * {
+    box-sizing: border-box; /* Asegura que padding y border no afecten el ancho y alto */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    background-color: #E3F2FD; /* Azul claro */
+    background-color: #e7f1ff; /* Color de fondo suave */
+    font-family: 'Arial', sans-serif; /* Tipografía */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .Centrar {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: auto;
-    margin-top: 300px;
-    background-color: #BBDEFB; /* Fondo azul suave */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 750px;
-}
-
-label {
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 700;
-    color: #0D47A1; /* Azul oscuro */
+    margin-bottom: 20px; /* Espacio debajo del formulario */
 }
 
 input[type="text"] {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #90CAF9; /* Borde azul claro */
-    border-radius: 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
+    width: 90%;
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #1976D2; /* Botón azul medio */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 button:hover {
-    background-color: #1E88E5; /* Efecto hover azul más claro */
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.centrar {
+    display: flex;
+    align-items: center; /* Alinear elementos en el centro */
+}
+
+.Resultado {
+    background-color: #444; /* Fondo del contenedor de resultado */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    margin-top: 20px; /* Margen superior */
+    text-align: center; /* Centrar texto */
+    display: flex;
+    align-items: center; /* Centrar el contenido */
+    flex-direction: column; /* Colocar en columna */
+}
+
+.Resultado h2 {
+    color: white; /* Color del título */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.Resultado a {
+    color: #b3b3b3; /* Color del enlace */
+    text-decoration: none;
+}
+
+.Resultado a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.Resultado img {
+    margin-top: 10px; /* Espacio encima de la imagen */
+    width: 200px; /* Ajustar el ancho de la imagen */
+    height: auto; /* Mantener la proporción */
 }
