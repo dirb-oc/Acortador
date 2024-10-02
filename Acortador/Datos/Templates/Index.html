@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/Styles.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Style.css' %}">
     <title>Acortador</title>
 </head>
 <body>
-    <form method="post" class="Centrar">
-        {% csrf_token %}
-        <label for="nombre">Links:</label>
-        <input type="text" name="Link" placeholder="Coloca el Link">
-        <button type="submit" value="Enviar">Enviar</button>
-    </form>
-    {% if qr_image_url %}
-        <h2>Tu código QR:</h2>
-        <p>{{ resultado }}</p>
-        <img src="{{ qr_image_url }}" alt="Código QR">
-    {% endif %}
+    <div class="container">
+        <form method="post" class="Centrar">
+            {% csrf_token %}
+            <input type="text" name="Link" placeholder="Link" required>
+            <button type="submit" value="Enviar">Acortar</button>
+        </form>
+        {% if qr_image_url %}
+        <div class="centrar">
+            <div class="Resultado">
+                <h2>Link Acortado</h2>
+                <a href="{{ resultado }}" target="_blank">{{ resultado }}</a>
+                <img src="{{ qr_image_url }}" alt="Código QR">
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>

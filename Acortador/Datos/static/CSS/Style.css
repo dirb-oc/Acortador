@@ -57,6 +57,7 @@ button:hover {
     display: flex;
     align-items: center; /* Centrar el contenido */
     flex-direction: column; /* Colocar en columna */
+    min-width: 335px;
 }
 
 .Resultado h2 {
